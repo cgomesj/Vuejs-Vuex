@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="about my-3">
+    <h1>This application uses the functionalities of vuex.</h1>
   </div>
 </template>

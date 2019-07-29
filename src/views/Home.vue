@@ -1,18 +1,34 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div class="home container my-3">
+    <div class="row">
+      <div
+        class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-xs-12 mx-auto"
+      >
+        <h1>Vuex</h1>
+        <component :is="'app-result'" />
+        <component :is="'app-result-2'" />
+        <component :is="'app-counter'" />
+        <component :is="'app-counter-2'" />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import Counter from "@/components/Counter.vue";
+import Counter2 from "@/components/Counter2.vue";
+import Result from "@/components/Result.vue";
+import Result2 from "@/components/Result2.vue";
 
 export default {
   name: "home",
+
   components: {
-    HelloWorld
+    "app-counter": Counter,
+    "app-counter-2": Counter2,
+    "app-result": Result,
+    "app-result-2": Result2
   }
 };
 </script>
